@@ -5,13 +5,13 @@ fun main(args: Array<String>) {
 
 //name cannot be changed
     val name = "Shanmuk"
-    val name1:String = "shanmuk"
+    val name1: String = "shanmuk"
     println("name is $name")
-    println("name is "+name)
+    println("name is " + name)
 
 //salary can be changed
     var salary = 12
-    var salary1:Int = 12
+    var salary1: Int = 12
     println("salary is $salary")
 
 
@@ -29,26 +29,25 @@ fun main(args: Array<String>) {
             Intern
         In market simplified
     """.trimIndent()
-println(string4)
+    println(string4)
 
 //Arithmetic Operators
     var number1 = 10;
     var number2 = 5;
-    println(number1+number2);
-    println(number1-number2);
-    println(number1*number2);
-    println(number1/number2);
-    println(number1%number2);
+    println(number1 + number2);
+    println(number1 - number2);
+    println(number1 * number2);
+    println(number1 / number2);
+    println(number1 % number2);
 
 //relational operators
     val max = if (number1 > number2) {
         println("number1 is greater than number2.")
         number1
-    } else if(number1 < number2){
+    } else if (number1 < number2) {
         println("number2 is greater than number1.")
         number2
-    }
-    else{
+    } else {
         println("number1 is equal to number2.")
         number1
     }
@@ -56,41 +55,40 @@ println(string4)
 
     //Assignment operators
 
-    number1+= number2
+    number1 += number2
     println("number1+=number2 :$number1")
-    number1-= number2
+    number1 -= number2
     println("number1-=number2 :$number1")
-    number1*=number2
+    number1 *= number2
     println("number1*=number2 :$number1")
-    number1/= number2
+    number1 /= number2
     println("number1/=number2 :$number1")
-    number1%=number2
+    number1 %= number2
     println("number1%=number2 :$number1")
 
     //unary operators
     var flag = true
-    println("+number1 :"+ +number2)
-    println("-number1 :"+ -number2)
-    println("++number1 :"+ ++number2)
-    println("--number1 :"+ --number2)
-    println("!flag :"+ !flag)
+    println("+number1 :" + +number2)
+    println("-number1 :" + -number2)
+    println("++number1 :" + ++number2)
+    println("--number1 :" + --number2)
+    println("!flag :" + !flag)
 
     //logical operators
-    var number3=10
-    var number4=15
+    var number3 = 10
+    var number4 = 15
     var number5 = 20
-    var result = (number3>number4)&&(number4>number5)
+    var result = (number3 > number4) && (number4 > number5)
     println(result)
 
     //Conditional statements
     val max1 = if (number1 > number2) {
         println("number1 is greater than number2.")
         number1
-    } else if(number1 < number2){
+    } else if (number1 < number2) {
         println("number2 is greater than number1.")
         number2
-    }
-    else{
+    } else {
         println("number1 is equal to number2.")
         number1
     }
@@ -98,7 +96,7 @@ println(string4)
 
     //when
     var number = 4
-    var numberProvided = when(number) {
+    var numberProvided = when (number) {
         1 -> "One"
         2 -> "Two"
         3 -> "Three"
@@ -108,18 +106,17 @@ println(string4)
     }
     println("You provide $numberProvided")
 //for loop
-var sentence = "This is kotlin code"
-    for(char in sentence){
+    var sentence = "This is kotlin code"
+    for (char in sentence) {
         println(char)
     }
 
-    for(i in 1..5)
-    {
+    for (i in 1..5) {
         println(i)
     }
 //while
     var i = 1
-    while (i<=5){
+    while (i <= 5) {
         println(i)
         i++
     }
@@ -128,17 +125,17 @@ var sentence = "This is kotlin code"
     square()
 
     //parameter function
-    println(add(1,2))
+    println(add(1, 2))
 
 
 }
-fun square()
-{
+
+fun square() {
     var number = 25
     var result = Math.sqrt(number.toDouble())
     println("result is $result")
 }
 
-fun add(a:Int,b:Int):Int{
-    return a+b
+fun add(a: Int, b: Int): Int {
+    return a + b
 }
