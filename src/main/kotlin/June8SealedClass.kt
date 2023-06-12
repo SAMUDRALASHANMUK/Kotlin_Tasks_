@@ -11,6 +11,7 @@ fun main() {
     var rectangl = June8SealedClass.Rectangl(2, 3)
     var square = June8SealedClass.Square(3)
     var circle = June8SealedClass.Circle(3)
+
     getResult(rectangl)
     getResult(square)
     getResult(circle)

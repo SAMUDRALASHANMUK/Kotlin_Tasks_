@@ -30,11 +30,13 @@ class Honda : Car() {
         println("Honda is running safely..")
     }
 }
+
 abstract class Shape{
     abstract fun find()
 
 
 }
+
 class Square : Shape(){
     override fun find() {
         println("This is square")
@@ -56,8 +58,6 @@ class InterfaceImp : MyInterface {
     }
 }
 
-
-
 fun main() {
     //Constructor
     var obj = Human("shanmuk")
@@ -75,13 +75,10 @@ fun main() {
     obj3.find()
 
     //Interface
-
     val obj4 = InterfaceImp()
     println("Calling overriding id value = ${obj4.id}")
     obj4.doSomthing()
     println(obj4.absMethod())
-
-
 
 }
 
