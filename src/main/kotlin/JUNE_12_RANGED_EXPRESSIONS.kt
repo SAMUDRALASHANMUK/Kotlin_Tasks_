@@ -24,4 +24,9 @@ fun main() {
     for (c in 1 until 10) {
         println("using until results is : $c")
     }
+//    for(i in 'A'..'Z'){
+//        println(i)
+//    }
+    var s= 'A'..'Z'
+    s.forEach { println(it) }
 }
