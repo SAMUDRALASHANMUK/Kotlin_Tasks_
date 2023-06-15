@@ -1,4 +1,5 @@
 import java.util.Scanner
+import java.math.BigDecimal
 
 /*
 *Today's Task
@@ -75,14 +76,15 @@ class ShoppingCart {
         return 0
     }
 
+    fun applyDiscount(sum: Int,discountPrice:Double) {
 
-    fun applyDiscount(discountPercentage: Double, sum: Int) {
-        val discountedPrice = let {
-            val totalPrice = sum
-            totalPrice - (totalPrice * (discountPercentage / 100))
+        var discountedPrice = sum.let { let1 ->
+            discountPrice.let { let2 ->
+                let1 - (let1 * (let2 / 100))
+            }
         }
-        println("discountedPrice is $discountedPrice")
 
+        println("Discounted price is $discountedPrice")
     }
 }
 
@@ -97,10 +99,11 @@ fun main() {
     }
     val shoppingCart = ShoppingCart()
     val hashCart = mutableMapOf<String, Int>()
-    var sum = 0
+
     shoppingCart.addItem(scanner, hashMap, hashCart)
     shoppingCart.removeItem(scanner, hashCart)
-    var Sum = shoppingCart.calculatePrice(hashCart, sum)
-    shoppingCart.applyDiscount(10.0, Sum)
-
+    var sum = 0
+    sum = shoppingCart.calculatePrice(hashCart, sum)
+    var discountPrice = 20.0
+    shoppingCart.applyDiscount(sum,discountPrice)
 }

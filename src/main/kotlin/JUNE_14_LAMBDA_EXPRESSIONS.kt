@@ -1,7 +1,7 @@
 fun calculate(a: Int, b: Int, operation: (Int, Int) -> Int): Int {
     return operation(a, b)
 }
-fun main() {
+fun main6() {
     val addition = { x: Int, y: Int -> x + y }
 
     val result = calculate(5, 3, addition)
@@ -13,4 +13,12 @@ fun main() {
 
     println(evenNumbers) // Output: [2, 4, 6, 8, 10]
 
+}
+
+fun add(a:Int,b:Int,myLamda:(Int) -> Unit){
+    var sum = a+b
+    myLamda(sum)
+}
+fun main(){
+    var myLambda:(Int) -> Unit = {s:Int -> println(s) }
 }
