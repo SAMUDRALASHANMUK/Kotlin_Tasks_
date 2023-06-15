@@ -1,3 +1,5 @@
+import java.util.Scanner
+
 /*
 "You are building a music library application in Kotlin. The application should have the following features:
 
@@ -50,6 +52,7 @@ class Playlist {
 }
 
 fun main() {
+    var scanner = Scanner(System.`in`)
 
     var songsList = mutableListOf<Song>()
     var song1 = Song("Vachinde", " Fidaa", 4.0)
@@ -64,16 +67,31 @@ fun main() {
     songsList.add(song5)
     song1.play()
     println("Enter the artist name")
+
     var artistName = readln()
     println(filterByArtist(songsList, artistName))
+
     try {
         var playlist = Playlist()
         playlist.songs = songsList
-        playlist.addSong(Song("Song 1", "Artist 1", 180.0))
-        playlist.addSong(Song("Song 2", "Artist 2", 240.0))
-        playlist.addSong(Song("Song 3", "Artist 1", 200.0))
-        playlist.addSong(Song("Song 4", "Artist 3", 300.0))
-        playlist.addSong(Song("Samajavaragamana", "Ala Vaikunthapurramuloo", 4.25))
+//        playlist.addSong(Song("Song 1", "Artist 1", 180.0))
+//        playlist.addSong(Song("Song 2", "Artist 2", 240.0))
+//        playlist.addSong(Song("Song 3", "Artist 1", 200.0))
+//        playlist.addSong(Song("Song 4", "Artist 3", 300.0))
+//        playlist.addSong(Song("Samajavaragamana", "Ala Vaikunthapurramuloo", 4.25))
+
+        println("Enter how many songs you need to add")
+        var number = scanner.nextInt()
+        for (i in 1..number){
+            println("Enter title")
+            var title = readln()
+            println("Enter artist name")
+            var artist = readln()
+            println("Enter the duration")
+            var duration = scanner.nextDouble()
+            playlist.addSong(Song(title,artist,duration))
+        }
+
     } catch (e: DuplicateSongException) {
         println(e.message)
     }
